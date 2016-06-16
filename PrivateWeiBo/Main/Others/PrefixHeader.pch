@@ -1,0 +1,33 @@
+//
+//  PrefixHeader.pch
+//  PrivateWeiBo
+//
+//  Created by 羚羊 on 16/1/7.
+//  Copyright © 2016年 WBS. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// 分类头文件
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+BS.h"
+#import "UIImage+BS.h"
+
+#import "Header.h"
+
+#ifdef DEBUG // 调试状态, 打开LOG功能
+#define BSLog(...) NSLog(__VA_ARGS__)
+#else // 发布状态, 关闭LOG功能
+#define BSLog(...)
+#endif
+
+
+// 是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+
+#endif /* PrefixHeader_pch */
